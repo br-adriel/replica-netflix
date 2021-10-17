@@ -1,0 +1,374 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+    font-size: 16px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+/* Base */
+body {
+    background: var(--preto);
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background: linear-gradient(180deg, var(--preto), rgba(0, 0, 0, 0.7), 100%);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.65rem;
+}
+
+header .logo {
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    color: #ccc;
+    margin: 0 10px 0 0;
+    text-shadow: 0px 0px 1rem  rgba(0, 0, 0, 0.8);
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+.container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Obra destacada */
+.destaque .container {
+    margin: 3rem 5rem;
+    max-width: 40%;
+}
+
+.destaque {
+    font-size: 16px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .25) 100%),
+                url("../img/round-6-fundo.jpg");
+    background-size: cover;
+    background-position: top center;
+    height: 70vh;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 0.2rem 0.5em rgba(5, 5, 5, 0.5);
+}
+
+.destaque .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.destaque .titulo {
+    margin-top: 5rem;
+    font-size: 40px;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 0.2rem;
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.botao .fas {
+    margin-right: 0.5rem;
+}
+
+
+/* carrossel */
+.carrossel {
+    max-width: 100%;
+    margin: 1.5rem;
+}
+
+.carrossel, .carrossel .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-right: 0;
+}
+
+.carrossel h3 {
+    margin: 2rem 0 0.5rem 0;
+    font-size: 1.4rem;
+}
+
+.slide-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seta {
+    padding: 0 1rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.seta:hover {
+    color: #fff;
+    text-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.carrossel .slide {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding: 1em 0;
+    cursor: pointer;
+}
+
+.carrossel .poster {
+    min-width: 12%;
+    width: 12%;
+    margin: 0 0.75rem;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.carrossel .poster:hover {
+    transform: scale(1.1);
+}
+
+.carrossel .poster img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* modal */
+#modal-out {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 1.5rem 1rem;
+}
+
+.modal {
+    background: var(--preto);
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 65%;
+}
+
+.modal .modal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+.modal-top button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transform: scale(1.7);
+}
+
+.modal button i:hover {
+    cursor: pointer;
+}
+
+.modal-top button:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.modal-top .titulo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.modal .modal-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+.modal-body .trailer {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal-body .info {
+    width: 40%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.modal-body div {
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.modal h4 {
+    color: var(--vermelho);
+    margin-bottom: 0.25rem;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.modal .temporada {
+    color: var(--vermelho);
+    font-size: 0.8rem;
+}
+
+/* Breakpoints (baseados no bootstrap 5) */
+@media(max-width: 1200px) {
+    .destaque .container {
+        max-width: 50%;
+        margin: 1.5rem 2rem;
+    }
+
+    /* Carrossel */
+    .carrossel .container {
+        margin: 0;
+    }
+
+    .carrossel .poster {
+        min-width: 18%;
+    }
+
+    /* Modal */
+    .modal {
+        max-width: 75%;
+    }
+
+    .modal .modal-body {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .modal .trailer {
+        width: 100%;
+    }
+
+    .modal .info {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+
+@media(max-width: 768px) {
+    header .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    header .container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Obra em destaque */
+    #modal-out {
+        align-items: flex-start;
+    }
+
+    .destaque .container {
+        max-width: 100%;
+    }
+
+    /* Carrossel */
+    .carrossel .poster {
+        min-width: 25%;
+    }
+
+    /* Modal */
+    .modal {
+        max-width: 95%;
+    }
+    .modal iframe {
+        width: 100%;
+    }
+}
+
+
+@media(max-width: 576px) {
+    /* Obra em destaque */
+    .destaque {
+        height: 100vh;
+        text-align: center;
+    }
+
+    .destaque .botao {
+        padding: 0.65rem 0.65rem;
+    }
+
+    /* Carrossel */
+    .carrossel .poster {
+        min-width: 33%;
+    }
+}

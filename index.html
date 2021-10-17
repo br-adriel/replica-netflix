@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="">
+
+    <meta name="author" content="Adriel Faria">
+
+    <title>Trailerflix</title>
+
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/04655e0cf2.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="Logo da Trailerflix">
+                </a>
+            </h2>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="destaque">
+            <div class="container">
+                <h3 class="titulo">Round 6</h3>
+                <p class="descricao">Centenas de jogadores falidos aceitam um estranho convite para um jogo de sobrevivência. Um prêmio milionário aguarda, mas as apostas são altas e mortais.</p>
+                <div class="botoes">
+                    <a class="botao" role="button" href="https://www.youtube.com/watch?v=Ncra_hUVtMM" target="_blank">
+                        <i class="fas fa-play"></i>
+                        ASSISTIR
+                    </a>
+                    <a class="botao" role="button" id="botao-destaque">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carrossel">
+            <div class="container">
+                <h3>Recomendado para você</h3>
+                <div class="slide-container">
+                    <div class="seta">
+                        <i class="fas fa-chevron-left" onclick="anterior()"></i>
+                    </div>
+                    <div class="slide">
+                        <div class="poster">
+                            <img src="img/aang-capa.jpg" alt="Avatar - A Lenda de Aang">
+                        </div>
+                        <div class="poster">
+                            <img src="img/korra-capa.jpg" alt="A Lenda de Korra">
+                        </div>
+                        <div class="poster">
+                            <img src="img/jogos-vorazes-em-chamas-capa.jpg" alt="Jogos Vorazes: Em Chamas">
+                        </div>
+                        <div class="poster">
+                            <img src="img/the-100-capa.jpg" alt="The 100">
+                        </div>
+                        <div class="poster">
+                            <img src="img/a-morte-te-da-parabens-capa.jpg" alt="A Morte Te Dá Parabéns">
+                        </div>
+                        <div class="poster">
+                            <img src="img/futurama-capa.jpg" alt="Futurama">
+                        </div>
+                        <div class="poster">
+                            <img src="img/aranhaverso-capa.jpg" alt="Homem-Aranha: No Aranhaverso">
+                        </div>
+                        <div class="poster">
+                            <img src="img/b99-capa.jpg" alt="Brooklyn 99">
+                        </div>
+                    </div>
+                    <div class="seta">
+                        <i class="fas fa-chevron-right" onclick="proximo()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal-out">
+        <div class="modal">
+            <div class="modal-top">
+                <div class="temporada">
+                    <h3 class="titulo">Round 6</h3>
+                    <span>1 temporada | Disponível na Netflix</span>
+                </div>
+                <button class="fehcar-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ncra_hUVtMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+                <div class="info">
+                    <div class="descricao">
+                        <h4>Descrição:</h4>
+                        <p>Centenas de jogadores falidos aceitam um estranho convite para um jogo de sobrevivência. Um prêmio milionário aguarda, mas as apostas são altas e mortais.</p>
+                    </div>    
+                    <div class="elenco">
+                        <h4>Elenco:</h4>
+                        <ul>
+                            <li>Lee Jung-jae</li>
+                            <li>Park Hae-soo</li>
+                            <li>HoYeon Jung</li>
+                            <li>Wi Ha-joon</li>
+                            <li>Oh Yeong-su</li>
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
