@@ -1,5 +1,5 @@
 # Réplica/clone da página inicial da Netflix
-Uma réplica visual da página inicial da Netflix desenvolvida com o propósito de praticar minhas habilidade com CSS.
+Uma réplica visual da página inicial da Netflix desenvolvida com o propósito de praticar minhas habilidades com CSS.
 
 Essa tela foi constuída durante um curso online do site [Digital Inovation One](https://digitalinnovation.one/).
 
